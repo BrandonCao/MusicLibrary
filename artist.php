@@ -24,13 +24,13 @@ $label_query->execute();
 $label_query->bind_result($label_name);
 while($label_query->fetch()) {
     if($label_name == "Independent") {
-        print $artist_name . " is currently listed as an independent artist.";
+        $label_name = "";
     } else {
         print $artist_name . " is signed with " . $label_name;
     }
 }
 if(empty($label_name)) {
-    print $artist_name . " is currently listed as an independent artist.<br>";
+    print "<p>" . $artist_name . " is currently listed as an independent artist.</p>";
     print "Is " . $artist_name . " signed to a label? Choose an existing one, or enter a new label.";
     $label_data = $conn->query("SELECT idlabel, name FROM label");
     print "<form id='label_form' method='POST' action='artist.php?artist=" . $artist_name . "'>";

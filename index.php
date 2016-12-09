@@ -98,6 +98,7 @@ function in_music_array($needle, $haystack) {
 <body>
 
 <h2>Library</h2>
+<p>Enter new songs, from old or new artist and albums!</p>
 <form action="index.php" method="POST">
 <table>
 <tr><th>Song Name</th><th>Time</th><th>Artist</th><th>Album</th><th>Genre</th></tr>
